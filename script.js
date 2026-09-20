@@ -1,13 +1,16 @@
-const list = [
-    "Сегодня идеальный день для изучения чего-то нового! У тебя всё получится.",
-    "Будь готов к неожиданному, но очень приятному звонку или сообщению.",
-    "Сделай паузу и выпей чашечку ароматного чая или кофе. Ты заслужил отдых.",
-    "Один из твоих старых проектов на этой неделе вызовет восторг у окружающих!",
-    "Твое упорство скоро принесет свои плоды. Не останавливайся!",
-    "Сегодня отличный день, чтобы порадовать себя чем-то вкусным."
+const quotes = [
+    "«Чтобы понять рекурсию, нужно сначала понять рекурсию».",
+    "«В мире есть 10 типов людей: те, кто понимают двоичную систему, и те, кто нет».",
+    "«Программирование — это искусство превращения кофе в код».",
+    "«Если код работает, не трогай его!»",
+    "«Компьютер выполняет не то, что вы хотите, а то, что вы ему приказали».",
+    "«Лучший код — это тот, который еще не написан»."
 ];
 
-function getPrediction() {
-    const randomIndex = Math.floor(Math.random() * list.length);
-    document.getElementById("prediction").innerText = list[randomIndex];
-}
+const quoteElement = document.getElementById('quote');
+const buttonElement = document.getElementById('btn');
+
+buttonElement.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteElement.textContent = quotes[randomIndex];
+});
